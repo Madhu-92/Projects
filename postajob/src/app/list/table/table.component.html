@@ -1,0 +1,18 @@
+<div>
+    <button class="btn ui right floated button" routerLink="/form">Add Job</button>
+</div>
+
+<table class="ui celled table">
+    <thead>
+      <tr><th>Job Title</th>
+      <th>Salary</th>
+      <th>Description</th>
+    </tr></thead>
+    <tbody>
+      <tr *ngFor="let item of users">
+        <td data-label="Job Title">{{item.job}}</td>
+        <td data-label="Salary">{{item.salary}}</td>
+        <td data-label="Description">{{item.desc}}</td>
+      </tr>
+    </tbody>
+  </table>

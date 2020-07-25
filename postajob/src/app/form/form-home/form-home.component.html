@@ -1,0 +1,36 @@
+<app-divider>
+    Post a job
+</app-divider>
+<!-- <p>form-home works!</p> -->
+<form #userForm="ngForm" novalidate>
+    <!-- {{userForm.value | json}}
+    <hr />
+    {{userModel | json}} -->
+<div class="ui form">
+    <div class="inline fields">
+      <div class="eight wide field">
+        <label>Job Title:</label>
+        <input name="job" [(ngModel)]="_user.job"  type="text" placeholder="Title...">
+      </div>
+    </div>
+
+    <div class="inline fields">
+    <div class="eight wide field">
+        <label>Job Salary:</label>
+        <input type="number" name="salary" [(ngModel)]="_user.salary" placeholder="">
+    </div>
+    </div>
+
+    
+        <div class="field">
+          <label>Job Description:</label>
+          <textarea type="text" name="desc" [(ngModel)]="_user.desc" rows="2"></textarea>
+        </div>
+
+    <!-- <div type="submit" class="ui submit button">Add</div> -->
+
+    <button class="ui submit button" type="submit" (click)="addUser()" routerLink="/list">Add</button>
+
+
+</div>
+</form>
